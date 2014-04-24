@@ -34,8 +34,11 @@ class RestaurantesController < ApplicationController
 
   def update
     @restaurante = Restaurante.find(params[:id])
-    @restaurante.update(restaurante_params)
-    redirect_to action: 'show', id: @restaurante
+    if @restaurante.update(restaurante_params)
+      redirect_to action: 'show', id: @restaurante
+    else
+      render action: 'edit'
+    end
   end
 
   private
