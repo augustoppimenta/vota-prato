@@ -25,6 +25,16 @@ class RestaurantesController < ApplicationController
     redirect_to action: 'show', id: @restaurante
   end
 
+  def edit
+    @restaurante = Restaurante.find(params[:id])
+  end
+
+  def update
+    @restaurante = Restaurante.find(params[:id])
+    @restaurante.update(restaurante_params)
+    redirect_to action: 'show', id: @restaurante
+  end
+
   private
 
     def restaurante_params
