@@ -1,0 +1,10 @@
+<h1>Adicionando Restaurantes</h1>
+
+<%= form_for @restaurante do |f| %>
+
+  Nome: <%= f.text_field :nome %>
+  Endereço: <%= f.text_field :endereco %>
+  Especialidade: <%= f.text_field :especialidade %>
+  <%= f.submit %>
+
+<% end %>
