@@ -11,6 +11,11 @@ class RestaurantesController < ApplicationController
 
   def show
     @restaurante = Restaurante.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.xml {render xml: @restaurante}
+      format.json {render json: @restaurante}
+    end
   end
 
   def destroy
