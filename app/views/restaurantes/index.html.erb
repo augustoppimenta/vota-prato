@@ -1,3 +1,15 @@
-<p>
-  Estou no controller de Restaurantes!
-</p>
+<h1>Listagem de restaurantes</h1>
+
+<table>
+  <th>ID</th>
+  <th>Nome</th>
+  <th>Endereço</th>
+  <th>Especialidade</th>
+</table>
+
+<% @restaurantes.each do |restaurante| %>
+  <td><%= restaurante.id%></td>
+  <td><%= restaurante.nome%></td>
+  <td><%= restaurante.endereço%></td>
+  <td><%= restaurante.especialidade%></td>
+<% end %>
