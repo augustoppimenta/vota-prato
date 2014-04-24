@@ -1,8 +1,8 @@
 VotaPrato::Application.routes.draw do
 
+  resources :restaurantes
   match 'ola' =>  'ola_mundo#index', via: 'get'
 
-  resources :restaurantes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
