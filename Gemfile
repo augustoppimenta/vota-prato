@@ -43,3 +43,7 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+
+#Gem para paginação
+gem 'kaminari', '~> 0.15.1'
