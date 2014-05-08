@@ -1,7 +1,8 @@
 class RestaurantesController < ApplicationController
 
+
   def index
-    @restaurantes = Restaurante.order :nome
+    @restaurantes = Restaurante.order(:nome).page params[:page]
     respond_to do |format|
       format.html
       format.xml {render xml: @restaurantes}
