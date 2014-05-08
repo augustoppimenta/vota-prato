@@ -13,7 +13,7 @@ class Restaurante < ActiveRecord::Base
 
   has_many :comentarios, as: :comentavel
 
-
+  paginates_per 10
   private
     def primeira_letra_deve_ser_maiuscula
       errors.add(:nome, "- primeira letra deve ser maiúscula") unless nome =~ /[A-Z].*/
